@@ -1,12 +1,14 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { GoArrowUpRight } from 'react-icons/go'
 import { FiMoon } from 'react-icons/fi'
 import { RiCloseLine, RiMenu3Line } from 'react-icons/ri'
 
 export default function Navbar() {
+  const [isScroll, setIsScroll] = useState(false)
+
   const mobileMenuRef = useRef<HTMLUListElement | null>(null)
   
   const openMenu = () => {
@@ -17,14 +19,21 @@ export default function Navbar() {
     (mobileMenuRef.current as HTMLUListElement).style.transform = 'translateX(16rem)'
   }
 
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      window.scrollY > 50 ? setIsScroll(true) : setIsScroll(false)
+    })  
+  }, [])
+  
+
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 h-40 mx-auto -z-10 bg-gradient-to-b from-red-100 to-transparent translate-y-[-50%]"></div>
-      <nav className="flex justify-between items-center w-full fixed z-50 px-5 lg:px-8 xl:px-[8%] py-4">
+      <div className="fixed top-0 right-0 left-0 h-40 -z-10 bg-gradient-to-b from-red-100 to-transparent translate-y-[-50%]"></div>
+      <nav className={`flex justify-between items-center w-full fixed z-50 px-5 lg:px-8 xl:px-[8%] py-4 ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm' : ''}`}>
         <a href="#top">
           <Image src="/globe.svg" alt="logo" className="cursor-pointer mr-14" width={50} height={50} />
         </a>
-        <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50'>
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? '' : 'bg-white shadow-md bg-opacity-50'}`}>
           <li>
             <a href="#top">Home</a>
           </li>

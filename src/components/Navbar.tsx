@@ -10,7 +10,7 @@ export default function Navbar() {
       <a href="#top">
         <Image src="/globe.svg" alt="logo" className="cursor-pointer mr-14" width={50} height={50} />
       </a>
-      <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50'>
+      <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-md bg-opacity-50'>
         <li>
           <Link href="#top">Home</Link>
         </li>
