@@ -44,7 +44,7 @@ export default function Navbar() {
             <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#services">Services</a>
           </li>
         </ul>
         <div className='flex items-center gap-5 mr-10'>
