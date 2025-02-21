@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        lightHover: "#fcfcff",
+        darkHover: "#2a004a",
+        darkTheme: "#11001f",
+      },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"],
+        ovo: ["Ovo", "serif"],
+        geist: ["var(--font-geist-sans)"],
+        geistMono: ["var(--font-geist-mono)"],
       },
     },
   },
