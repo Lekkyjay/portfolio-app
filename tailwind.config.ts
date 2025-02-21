@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        lightHover: "#fcfcff",
+        lightHover: "#fcf4ff",
         darkHover: "#2a004a",
         darkTheme: "#11001f",
       },
@@ -19,6 +19,10 @@ export default {
         geist: ["var(--font-geist-sans)"],
         geistMono: ["var(--font-geist-mono)"],
       },
+      boxShadow: {
+        black: '4px 4px 0 #000',
+        white: '4px 4px 0 #fff'
+      }
     },
   },
   plugins: [],
