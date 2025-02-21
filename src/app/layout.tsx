@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${outfit.className} ${ovo.className} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden`}>
         {children}
       </body>
     </html>
