@@ -1,7 +1,28 @@
-import { infoList, toolsData } from '@/lib/data'
 import Image from 'next/image'
+import { FaCode } from "react-icons/fa";
+import { SlGraduation } from "react-icons/sl";
+import { BiHistory } from "react-icons/bi";
+import { toolsData } from '@/lib/data'
 
 export default function About() {
+  const infoList = [
+    {
+      icon: <FaCode className="mt-3 size-10" />,
+      title: 'Languages',
+      description: 'HTML, CSS, JavaScript, ReactJs, NextJs',
+    },
+    {
+      icon: <SlGraduation className="mt-3 size-10" />,
+      title: 'Education',
+      description: 'Master of Science in Mech. Engineering',
+    },
+    {
+      icon: <BiHistory className="mt-3 size-10" />,
+      title: 'Experience',
+      description: 'Over 5 years experience in Fullstack Web Development',
+    }
+  ]
+
   return (
     <div id="about" className="w-full px-[12%] py-10 scroll-mt-20 min-h-screen">
       <h4 className="text-center mb-2 text-lg font-ovo">Introduction</h4>
@@ -21,16 +42,16 @@ export default function About() {
             I am currently seeking a position as a Full Stack Web Developer so lets connect and make things happen. 
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <li key={index} className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 hover:shadow-black duration-500">
-                <Image src={icon} alt="icon" width={40} height={40} className="mt-3" />
-                <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-600 text-sm">{description}</p>
+            {infoList.map(({ icon, title, description }, index) => (
+              <li key={index} className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 hover:shadow-black duration-500 dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                {icon}
+                <h3 className="my-4 font-semibold text-gray-700 dark:text-white">{title}</h3>
+                <p className="text-gray-600 text-sm dark:text-white/80">{description}</p>
               </li>
             ))}
           </ul>
 
-          <h4 className="my-6 text-gray-700 font-ovo">Tools I use</h4>
+          <h4 className="my-6 text-gray-700 font-ovo dark:text-white/80">Tools I use</h4>
 
           <ul className="flex items-center gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
