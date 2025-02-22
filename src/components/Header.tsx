@@ -14,10 +14,10 @@ export default function Header() {
         I'm a fullstack developer with a passion for creating beautiful and functional web applications.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-        <Link href="#contact" className="flex items-center gap-3 px-10 py-3 border border-white rounded-full bg-black text-white">
+        <Link href="#contact" className="flex items-center gap-3 px-10 py-3 border border-white rounded-full bg-black text-white dark:bg-transparent">
           Contact me <GoArrowUpRight />
         </Link>
-        <Link href="/nginx.pdf" download className="flex items-center gap-3 px-10 py-3 border border-gray-500 rounded-full">
+        <Link href="/nginx.pdf" download className="flex items-center gap-3 px-10 py-3 border border-gray-500 rounded-full dark:bg-white dark:text-black">
           My Resume <GoArrowUpRight />
         </Link>
       </div>
