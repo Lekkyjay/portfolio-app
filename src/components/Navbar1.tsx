@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { GoArrowUpRight } from 'react-icons/go'
 import { FiMoon } from 'react-icons/fi'
 import { RiCloseLine, RiMenu3Line } from 'react-icons/ri'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   const [isScroll, setIsScroll] = useState(false)
@@ -28,7 +29,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 right-0 left-0 h-80 -z-10 bg-gradient-to-b from-red-100 to-transparent translate-y-[-50%]"></div>
+      <div className="fixed top-0 right-0 left-0 h-80 -z-10 bg-gradient-to-b from-red-100 to-transparent translate-y-[-50%] dark:hidden"></div>
       <nav className={`flex justify-between items-center w-full fixed z-50 px-5 lg:px-8 xl:px-[8%] py-4 ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm' : ''}`}>
         <Link href="#top">
           <span className='text-3xl font-bold tracking-wider'>Lekan</span> 
@@ -52,16 +53,14 @@ export default function Navbar() {
           </li>
         </ul>
         <div className='flex items-center gap-5 mr-10'>
-          <button>
-            <FiMoon className='text-3xl cursor-pointer' />
-          </button>
+          <ThemeToggle />
           <Link href="#contact" className='hidden lg:flex items-center gap-3 rounded-full px-10 py-3 border border-gray-500'>
             Contact <GoArrowUpRight />
           </Link>
           <button className='block md:hidden' onClick={openMenu}>
             <RiMenu3Line className='text-3xl cursor-pointer' />
           </button>
-        </div>
+        </div>        
         
         <ul ref={mobileMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 -right-64 w-64 z-50 h-screen bg-rose-50 transition duration-500">
           <div className="absolute top-5 right-5" onClick={closeMenu}>
