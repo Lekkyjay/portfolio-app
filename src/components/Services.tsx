@@ -17,12 +17,12 @@ export default function Services() {
 
       <div className="grid grid-cols-auto gap-6 my-10">
         {servicesData.map(({ icon, title, description, link }, index) => (
-          <div key={index} className="border-[0.5px] border-gray-400 rounded-lg px-8 py-12 cursor-pointer hover:bg-lightHover hover:-translate-y-1 hover:shadow-black duration-500">
+          <div key={index} className="border-[0.5px] border-gray-400 rounded-lg px-8 py-12 cursor-pointer hover:bg-lightHover hover:-translate-y-1 hover:shadow-black duration-500 dark:hover:shadow-white dark:hover:bg-darkHover/50">
             <div className="bg-rose-500 text-white p-2 rounded-md w-fit mt-3">
               <Image src={icon} alt="icon" width={40} height={40} />
             </div>
-            <h3 className="text-lg my-4 text-gray-700">{title}</h3>
-            <p className="text-gray-600 text-sm leading-5">{description}</p>
+            <h3 className="text-lg my-4 text-gray-700 dark:text-white">{title}</h3>
+            <p className="text-gray-600 text-sm leading-5 dark:text-white/80">{description}</p>
             <Link href={link} className='flex items-center gap-2 mt-5 text-sm'>
               Read more <MdArrowForward />              
             </Link>
