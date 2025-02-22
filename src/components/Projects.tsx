@@ -32,7 +32,7 @@ export default function Projects() {
         showcasing my skills and expertise in web development.
       </motion.p>
 
-      <motion.div className='grid grid-cols-auto my-10 gap-5 dark:text-black'
+      <motion.div className='grid grid-cols-auto my-10 gap-6 dark:text-black'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}

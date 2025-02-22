@@ -14,7 +14,27 @@ export const projectsData = [
   {
     title: 'Photography Website',
     description: 'Web Design',
-    bgImage: '/images/project-img-03.jpg'
+    bgImage: '/images/project-img-05.jpg'
+  },
+  {
+    title: 'UI/UX Designing',
+    description: 'UI/UX Design',
+    bgImage: '/images/project-img-04.jpg'
+  },
+  {
+    title: 'Frontend Developer',
+    description: 'Web Design',
+    bgImage: '/images/project-img-01.jpg',
+  },
+  {
+    title: 'Geo based app',
+    description: 'Mobile App',
+    bgImage: '/images/project-img-02.jpg'
+  },
+  {
+    title: 'Photography Website',
+    description: 'Web Design',
+    bgImage: '/images/project-img-05.jpg'
   },
   {
     title: 'UI/UX Designing',
