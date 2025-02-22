@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { GoArrowUpRight } from 'react-icons/go'
 import { FiMoon } from 'react-icons/fi'
@@ -28,35 +28,36 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 right-0 left-0 h-40 -z-10 bg-gradient-to-b from-red-100 to-transparent translate-y-[-50%]"></div>
+      <div className="fixed top-0 right-0 left-0 h-80 -z-10 bg-gradient-to-b from-red-100 to-transparent translate-y-[-50%]"></div>
       <nav className={`flex justify-between items-center w-full fixed z-50 px-5 lg:px-8 xl:px-[8%] py-4 ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm' : ''}`}>
-        <a href="#top">
-          <Image src="/globe.svg" alt="logo" className="cursor-pointer mr-14" width={50} height={50} />
-        </a>
+        <Link href="#top">
+          <span className='text-3xl font-bold tracking-wider'>Lekan</span> 
+          <span className='text-4xl font-bold text-red-500'>.</span>
+        </Link>
         <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? '' : 'bg-white shadow-md bg-opacity-50'}`}>
           <li>
-            <a href="#top">Home</a>
+            <Link href="#top">Home</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link href="#about">About</Link>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <Link href="#services">Services</Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link href="#projects">Projects</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link href="#contact">Contact</Link>
           </li>
         </ul>
         <div className='flex items-center gap-5 mr-10'>
           <button>
             <FiMoon className='text-3xl cursor-pointer' />
           </button>
-          <a href="#contact" className='hidden lg:flex items-center gap-3 rounded-full px-10 py-3 border border-gray-500'>
+          <Link href="#contact" className='hidden lg:flex items-center gap-3 rounded-full px-10 py-3 border border-gray-500'>
             Contact <GoArrowUpRight />
-          </a>
+          </Link>
           <button className='block md:hidden' onClick={openMenu}>
             <RiMenu3Line className='text-3xl cursor-pointer' />
           </button>
@@ -67,19 +68,19 @@ export default function Navbar() {
             <RiCloseLine className="text-3xl cursor-pointer" />
           </div>
           <li>
-            <a href="#top" onClick={closeMenu}>Home</a>
+            <Link href="#top" onClick={closeMenu}>Home</Link>
           </li>
           <li>
-            <a href="#about" onClick={closeMenu}>About</a>
+            <Link href="#about" onClick={closeMenu}>About</Link>
           </li>
           <li>
-            <a href="#services" onClick={closeMenu}>Services</a>
+            <Link href="#services" onClick={closeMenu}>Services</Link>
           </li>
           <li>
-            <a href="#projects" onClick={closeMenu}>Projects</a>
+            <Link href="#projects" onClick={closeMenu}>Projects</Link>
           </li>
           <li>
-            <a href="#contact" onClick={closeMenu}>Contact</a>
+            <Link href="#contact" onClick={closeMenu}>Contact</Link>
           </li>
         </ul>
       </nav>
