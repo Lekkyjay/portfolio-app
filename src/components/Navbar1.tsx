@@ -30,12 +30,12 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed top-0 right-0 left-0 h-80 -z-10 bg-gradient-to-b from-red-100 to-transparent translate-y-[-50%] dark:hidden"></div>
-      <nav className={`flex justify-between items-center w-full fixed z-50 px-5 lg:px-8 xl:px-[8%] py-4 ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm' : ''}`}>
+      <nav className={`flex justify-between items-center w-full fixed z-50 px-5 lg:px-8 xl:px-[8%] py-4 ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20' : ''}`}>
         <Link href="#top">
           <span className='text-3xl font-bold tracking-wider'>Lekan</span> 
           <span className='text-4xl font-bold text-red-500'>.</span>
         </Link>
-        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? '' : 'bg-white shadow-md bg-opacity-50'}`}>
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? '' : 'bg-white shadow-md bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent'}`}>
           <li>
             <Link href="#top">Home</Link>
           </li>
@@ -52,9 +52,9 @@ export default function Navbar() {
             <Link href="#contact">Contact</Link>
           </li>
         </ul>
-        <div className='flex items-center gap-5 mr-10'>
+        <div className='flex items-center gap-5'>
           <ThemeToggle />
-          <Link href="#contact" className='hidden lg:flex items-center gap-3 rounded-full px-10 py-3 border border-gray-500'>
+          <Link href="#contact" className='hidden lg:flex items-center gap-3 rounded-full px-10 py-3 ml-4 border border-gray-500 dark:border-white/50'>
             Contact <GoArrowUpRight />
           </Link>
           <button className='block md:hidden' onClick={openMenu}>
@@ -62,7 +62,7 @@ export default function Navbar() {
           </button>
         </div>        
         
-        <ul ref={mobileMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 -right-64 w-64 z-50 h-screen bg-rose-50 transition duration-500">
+        <ul ref={mobileMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 -right-64 w-64 z-50 h-screen bg-rose-50 dark:bg-darkHover transition duration-500">
           <div className="absolute top-5 right-5" onClick={closeMenu}>
             <RiCloseLine className="text-3xl cursor-pointer" />
           </div>
