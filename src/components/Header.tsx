@@ -40,13 +40,13 @@ export default function Header() {
           className="flex items-center gap-3 px-10 py-3 border border-white rounded-full bg-black text-white dark:bg-transparent">
           Contact me <GoArrowUpRight />
         </motion.a>
-        <motion.a 
+        {/* <motion.a 
           initial={{ y: 30, opacity: 0 }} 
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
           href="/cv-junaid.pdf" download className="flex items-center gap-3 px-10 py-3 border border-gray-500 rounded-full dark:bg-white dark:text-black">
           My Resume <GoArrowUpRight />
-        </motion.a>
+        </motion.a> */}
       </div>
     </div>
   )
